@@ -1,6 +1,6 @@
-package com.home.playground.contain
+package com.home.playground.storage
 
-class LongArrayContainer : IntContainer {
+class LongArrayStorage : IntStorage {
     companion object {
         private const val VALUE_SIZE = 6
         private const val VALUE_MASK = 0x3F

@@ -28,7 +28,34 @@ This file provides a complete description of the requirements and specifications
 └── README.md
 ```
 
-## Installation
+## Getting Started
 
-1. Ensure you have JDK (Java Development Kit) version 17 or higher installed.
-2. Download and install Gradle.
+Prerequisites:
+
+* Kotlin 21
+* Gradle
+
+## Setup
+
+### Clone the repository
+
+```shell
+git clone https://github.com/oURMIo/ip-address-counter.git
+cd ip-address-counter
+```
+
+Build the project
+
+```shell
+./gradlew clean build
+```
+
+### Running the Application
+
+To run the application, use the main method in com.home.playground.MainKt:
+
+```shell
+./gradlew run
+```
+
+Or, if you are using an IDE, you can run the main method directly from `com.home.playground.MainKt`.

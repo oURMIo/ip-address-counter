@@ -1,11 +1,11 @@
-package com.home.playground.contain
+package com.home.playground.storage
 
-interface IntContainer {
+interface IntStorage {
     fun add(number: Int)
 
     fun countUnique(): Long
 
-    fun addAll(other: IntContainer) {
+    fun addAll(other: IntStorage) {
         throw UnsupportedOperationException()
     }
 }
