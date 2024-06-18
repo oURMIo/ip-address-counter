@@ -1,6 +1,6 @@
 package com.home.playground.storage
 
-class LongArrayStorage : IntStorage {
+class LongArrayStorage {
     companion object {
         private const val VALUE_SIZE = 6
         private const val VALUE_MASK = 0x3F
@@ -9,13 +9,19 @@ class LongArrayStorage : IntStorage {
 
     private val storage = LongArray(STORAGE_SIZE)
 
-    override fun add(number: Int) {
+    fun add(number: Int) {
         val index = number ushr VALUE_SIZE
         val value = number and VALUE_MASK
         storage[index] = storage[index] or (1L shl value)
     }
 
-    override fun countUnique(): Long {
+    fun countUnique(): Long {
         return storage.sumOf { it.countOneBits().toLong() }
+    }
+
+    fun addAll(other: LongArrayStorage) {
+        for (i in other.storage.indices) {
+            storage[i] = storage[i] or other.storage[i]
+        }
     }
 }
